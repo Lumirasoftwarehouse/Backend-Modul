@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ModuleController;
 
 Route::group([
     'prefix' => 'auth'
@@ -24,3 +25,6 @@ Route::group([
       
     });
   });
+
+  Route::get('list-module', [ModuleController::class,'listModule']);
+  Route::get('download-module/{fileName}', [ModuleController::class,'downloadModule']);
