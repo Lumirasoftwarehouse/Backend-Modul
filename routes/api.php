@@ -26,5 +26,9 @@ Route::group([
     });
   });
 
-  Route::get('list-module', [ModuleController::class,'listModule']);
-  Route::get('download-module/{fileName}', [ModuleController::class,'downloadModule']);
+  Route::get('list-module-sd', [ModuleController::class,'listModuleSd']);
+  Route::get('list-module-smp', [ModuleController::class,'listModuleSmp']);
+  Route::get('list-module-sma', [ModuleController::class,'listModuleSma']);
+  Route::get('download-moduleSd/{fileName}', [ModuleController::class,'downloadModuleSd']);
+  Route::get('download-moduleSmp/{fileName}', [ModuleController::class,'downloadModule']);
+  Route::get('download-moduleSma/{fileName}', [ModuleController::class,'downloadModuleSma']);
